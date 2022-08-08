@@ -1,6 +1,7 @@
 import { AppBar, Toolbar, styled, Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import Search from "./Search";
 
 const HeaderStyle = styled(AppBar)`
   background: #2874fo;
@@ -17,6 +18,18 @@ const SubtittleComponent = styled(Typography)`
   text-align: center;
 `;
 
+const BoxFlexComponent = styled(Box)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ImageMarginLeft = styled("img")({
+  marginLeft: 5,
+  width: 10,
+  height: 10,
+});
+
 const Header = () => {
   return (
     <HeaderStyle>
@@ -24,14 +37,19 @@ const Header = () => {
         <BoxComponent>
           <Image
             src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png"
-            alt=""
+            alt="Logo"
             height="25"
             width="100"
           />
-          <Box>
+          <BoxFlexComponent>
             <SubtittleComponent>Explore Plus</SubtittleComponent>
-          </Box>
+            <ImageMarginLeft
+              src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png"
+              alt="subLogo"
+            />
+          </BoxFlexComponent>
         </BoxComponent>
+        <Search />
       </Toolbar>
     </HeaderStyle>
   );
