@@ -1,6 +1,7 @@
 import { AppBar, Toolbar, styled, Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import ButtonComponent from "./ButtonComponent";
 import Search from "./Search";
 
 const HeaderStyle = styled(AppBar)`
@@ -30,10 +31,14 @@ const ImageMarginLeft = styled("img")({
   height: 10,
 });
 
+const ButtonComponentBox = styled(Box)`
+  margin-left: 4%;
+`;
+
 const Header = () => {
   return (
     <HeaderStyle>
-      <Toolbar>
+      <Toolbar style={{ minHeight: 55 }}>
         <BoxComponent>
           <Image
             src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png"
@@ -50,6 +55,9 @@ const Header = () => {
           </BoxFlexComponent>
         </BoxComponent>
         <Search />
+        <ButtonComponentBox>
+          <ButtonComponent />
+        </ButtonComponentBox>
       </Toolbar>
     </HeaderStyle>
   );

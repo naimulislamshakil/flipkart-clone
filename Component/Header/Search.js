@@ -28,7 +28,7 @@ const Search = () => {
     <InputBox>
       <InputBaseComponent placeholder="Search Product, Catagorey and Brands" />
       <BoxSearchComponent>
-        <SearchIcon />
+        <SearchIcon style={{}} />
       </BoxSearchComponent>
     </InputBox>
   );
