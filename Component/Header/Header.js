@@ -10,7 +10,7 @@ const HeaderStyle = styled(AppBar)`
 `;
 
 const BoxComponent = styled(Box)`
-  margin-left: 10%;
+  margin: 10% 10%;
   line-height: 0;
 `;
 
