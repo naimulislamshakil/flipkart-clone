@@ -1,0 +1,1 @@
+export const GET_SUBHEADER = "GET_SUBHEADER";
