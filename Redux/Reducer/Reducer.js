@@ -12,6 +12,12 @@ const flipkartReducer = (state = intialState, action) => {
         subheaders: action.payload,
       };
 
+    case types.GET_BANNER:
+      return {
+        ...state,
+        banners: action.payload,
+      };
+
     default:
       return state;
   }
