@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["static-assets-web.flixcart.com"],
+    domains: ["rukminim1.flixcart.com", "static-assets-web.flixcart.com"],
   },
 };

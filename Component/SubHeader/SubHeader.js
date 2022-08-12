@@ -1,8 +1,17 @@
-import { Box } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSubHeaderFunction } from "../../Redux/Action/Action";
+import HeaderCard from "./HeaderCard";
+
+const BoxMargin = styled("Box")`
+  display: flex;
+  margin: 55px 50px 0 50px;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+`;
 
 const SubHeader = () => {
   const dispatch = useDispatch();
@@ -13,12 +22,11 @@ const SubHeader = () => {
   }, [dispatch]);
 
   return (
-    <Box style={{ marginTop: 55 }}>
+    <BoxMargin variant="outlined" sx={{ boxShadow: 3 }}>
       {subheaders.map((header) => (
-        <li key={header._id}>{header.text}</li>
+        <HeaderCard key={header._id} header={header}></HeaderCard>
       ))}
-      <h2>This is Sub Header</h2>
-    </Box>
+    </BoxMargin>
   );
 };
 
