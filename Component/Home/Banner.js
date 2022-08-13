@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { getBannerFunction } from "../../Redux/Action/Action";
+import BannerCard from "./BannerCard";
 
 const responsive = {
   superLargeDesktop: {
@@ -35,10 +36,9 @@ const Banner = () => {
   return (
     <Box style={{ margin: 10 }}>
       <Carousel responsive={responsive}>
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
+        {banners.map((banner) => (
+          <BannerCard key={banner._id} banner={banner}></BannerCard>
+        ))}
       </Carousel>
     </Box>
   );
